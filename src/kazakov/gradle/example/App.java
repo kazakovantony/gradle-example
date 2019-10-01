@@ -1,7 +1,6 @@
 package kazakov.gradle.example;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import gradle.module.JsonDisplay;
 
 public class App {
     private String id;
@@ -17,9 +16,7 @@ public class App {
         App app = new App();
         app.setId("100");
         System.out.println(app);
-
-        Gson gson = new GsonBuilder().create();
-        System.out.println(gson.toJson(app));
+        System.out.println(JsonDisplay.showJson(app));
     }
 
     public String getId() {
