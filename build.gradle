@@ -24,3 +24,18 @@ task showDate {
         println ""
     }
 }
+
+class ShowDateTask extends DefaultTask {
+    String dateMessage = "Date is: "
+
+    @TaskAction
+    void showDateTask() {
+        println dateMessage + new Date()
+    }
+}
+
+task showDateTask(type: ShowDateTask)
+
+task customShowDateTask(type: ShowDateTask) {
+    dateMessage = "Custom show date task"
+}
