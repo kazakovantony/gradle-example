@@ -39,3 +39,11 @@ task showDateTask(type: ShowDateTask)
 task customShowDateTask(type: ShowDateTask) {
     dateMessage = "Custom show date task"
 }
+
+buildscript {
+    dependencies {
+        classpath files('show-date/build/libs/show-date-1.0-SNAPSHOT.jar')
+    }
+}
+
+apply plugin: 'show-date-plugin'

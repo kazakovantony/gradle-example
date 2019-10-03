@@ -1,9 +1,9 @@
 /.idea
-/.gradle
+**/.gradle/*
 /libs
-/gradle
-/gradlew
-/gradlew.bat
+**/gradle/*
+**/gradlew
+**/gradlew.bat
 /wrapper
-/build
+**/build/*
 *.iml
