@@ -13,3 +13,14 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+task showDate {
+    dependsOn build
+    group "my tasks"
+    description "Show date description"
+    doLast {
+        println ""
+        println 'Current Date: ' + new Date()
+        println ""
+    }
+}
